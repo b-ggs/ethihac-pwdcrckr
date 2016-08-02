@@ -1,4 +1,3 @@
-require 'pry-byebug'
 require 'unix_crypt'
 
 DEFAULT_PASSWORD_LIST_PATH = '500-worst-passwords.txt'
@@ -95,9 +94,9 @@ def crack(user, password_list)
 end
 
 def parse_results(results)
-  resp = 'Password cracker results:\n'
+  resp = "Password cracker results:\n"
   results.each { |result|
-    resp += '===\n'
+    resp += "===\n"
     resp += "Username: #{result[:username]}\n"
     resp += "Password: #{result[:password] || 'Unable to crack.'}\n"
     resp += "Time to crack: #{result[:crack_time] || 'Unable to crack.'}\n"
