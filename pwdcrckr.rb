@@ -55,7 +55,7 @@ def get_uid(username_query, passwd)
   passwd.each { |line|
     line = line.split ':'
     username = line[0]
-    uid = line[3]
+    uid = line[2]
     return uid.to_i if username == username_query
   }
 end
